@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 export default () => (
   <nav className="navbar navbar-expand-md navbar-light bg-light">
     <div className="container">
-      <Link className="navbar-brand" href="/">
+      <Link className="navbar-brand" to="/">
         Site Name
       </Link>
       <button
