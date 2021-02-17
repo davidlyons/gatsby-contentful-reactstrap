@@ -48,5 +48,15 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: require('node-sass'),
+        postCssPlugins: [require('autoprefixer')],
+        sassOptions: {
+          precision: 6,
+        },
+      },
+    },
   ],
 };

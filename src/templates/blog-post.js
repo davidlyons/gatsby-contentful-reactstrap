@@ -23,21 +23,15 @@ class BlogPostTemplate extends React.Component {
               fluid={post.heroImage.fluid}
             />
           </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
-          </div>
+          <h1 className="my-4">{post.title}</h1>
+          <p>
+            {post.publishDate}
+          </p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: post.body.childMarkdownRemark.html,
+            }}
+          />
         </div>
       </Layout>
     )

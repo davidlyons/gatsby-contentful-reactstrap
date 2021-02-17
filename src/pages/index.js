@@ -17,17 +17,15 @@ class RootIndex extends React.Component {
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+          <h2 className="my-4">Recent articles</h2>
+          <div className="row">
+            {posts.map(({ node }) => {
+              return (
+                <div className="col-md-4" key={node.slug}>
+                  <ArticlePreview article={node} />
+                </div>
+              )
+            })}
           </div>
         </div>
       </Layout>
